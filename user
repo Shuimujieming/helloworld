@@ -1,1 +1,23 @@
+#include<opencv2/opencv.hpp>
+#include<iostream>
+using namespace std;
+using namespace cv;
+Mat src, dst;
+int main(int argc, char**argv)
+{
+	
+	src = imread("D:/opencvfiles/girl.jpg");
+	if (src.empty())
+	{
+		printf("image load error...");
+		return -1;
 
+	}
+	namedWindow("input");
+	imshow("input", src);
+	waitKey(0);
+	return 0;
+
+
+
+}
